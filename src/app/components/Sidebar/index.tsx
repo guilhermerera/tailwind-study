@@ -11,8 +11,9 @@ import {
 } from "lucide-react";
 import { NavItem } from "./NavItem";
 import { UsedSpaceWidget } from "./UsedSpaceWidget";
+import { Profile } from "./Profile";
 
-export const Sidebar = () => {
+export function Sidebar() {
 	return (
 		<aside className='flex flex-col gap-6 border-r border-zinc-200 px-5 py-8'>
 			<Logo />
@@ -38,8 +39,11 @@ export const Sidebar = () => {
 					<NavItem title='Support' icon={LifeBuoy} />
 					<NavItem title='Settings' icon={Cog} />
 				</nav>
+
 				<UsedSpaceWidget />
+				<div className='h-px w-full bg-zinc-200' />
+				<Profile />
 			</div>
 		</aside>
 	);
-};
+}
