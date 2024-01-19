@@ -1,5 +1,5 @@
 import { SettingsTabs } from "@/components/Settings/Tabs";
-import * as Input from "@/components/Input";
+import * as Input from "@/components/Form/Input";
 import { Mail } from "lucide-react";
 import * as FileInput from "@/components/Form/FileInput";
 
