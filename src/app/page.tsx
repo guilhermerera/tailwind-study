@@ -1,7 +1,7 @@
 import { SettingsTabs } from "@/components/Settings/Tabs";
 import * as Input from "@/components/Form/Input";
 import { Mail } from "lucide-react";
-import * as FileInput from "@/components/Form/FileInput/index";
+import * as FileInput from "@/components/Form/FileInputComponent";
 
 export default function Home() {
 	return (
