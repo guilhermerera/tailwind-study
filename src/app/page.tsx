@@ -1,7 +1,7 @@
 import { SettingsTabs } from "@/components/Settings/Tabs";
 import * as Input from "@/components/Form/Input";
 import { Mail } from "lucide-react";
-import * as FileInput from "@/components/Form/FileInput";
+import * as FileInput from "@/components/Form/FileInput/index";
 
 export default function Home() {
 	return (
@@ -137,7 +137,7 @@ export default function Home() {
 
 						<FileInput.Root>
 							<FileInput.Trigger />
-							<FileInput.Control multiple/>
+							<FileInput.Control multiple />
 						</FileInput.Root>
 					</div>
 
