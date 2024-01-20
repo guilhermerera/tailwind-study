@@ -2,7 +2,13 @@
 import { UploadCloud } from "lucide-react";
 import { useFileInput } from "./Root";
 
-export function Trigger() {
+export function Trigger({
+	acceptedFormats,
+	maxSize
+}: {
+	acceptedFormats: string;
+	maxSize?: boolean;
+}) {
 	const { id } = useFileInput();
 	return (
 		<label
@@ -16,7 +22,9 @@ export function Trigger() {
 					<span className='font-semibold text-violet-700'>Click to upload</span>{" "}
 					or drag and drop
 				</span>
-				<span className='text-xs'>SVG, PNG, JPG or GIG (max. 800x400px)</span>
+				<span className='text-xs'>
+					{acceptedFormats} {maxSize && "(max. 800x400px)"}
+				</span>
 			</div>
 		</label>
 	);
