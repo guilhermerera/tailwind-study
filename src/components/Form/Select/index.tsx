@@ -5,14 +5,14 @@ import { ChevronDown } from "lucide-react";
 import { SelectItem } from "./SelectItem";
 import { ReactNode } from "react";
 
-export interface SelectProps {
+export interface SelectProps extends SelectPrimitive.SelectProps {
 	children: ReactNode;
 	placeholder: string;
 }
 
-export function Select({ children, placeholder }: SelectProps) {
+export function Select({ children, placeholder, ...props }: SelectProps) {
 	return (
-		<SelectPrimitive.Root>
+		<SelectPrimitive.Root {...props}>
 			<SelectPrimitive.Trigger className='flex h-11 w-full items-center justify-between gap-2 rounded-lg border border-zinc-300 px-3 py-2 shadow-sm data-[placeholder]:text-zinc-500'>
 				<SelectPrimitive.Value
 					placeholder={placeholder}
@@ -28,7 +28,7 @@ export function Select({ children, placeholder }: SelectProps) {
 					sideOffset={8}
 					side='bottom'
 					position='popper'
-					className='z-10 rounded-lg border border-zinc-300 bg-white w-[--radix-select-trigger-width] overflow-hidden'>
+					className='shadow-sm z-10 rounded-lg border border-zinc-300 bg-white w-[--radix-select-trigger-width] overflow-hidden'>
 					<SelectPrimitive.Viewport className='outline-none'>
 						{children}
 					</SelectPrimitive.Viewport>

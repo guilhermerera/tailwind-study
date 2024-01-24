@@ -1,9 +1,18 @@
 import { SettingsTabs } from "@/components/Settings/Tabs";
 import * as Input from "@/components/Form/Input";
-import { ChevronDown, Mail } from "lucide-react";
+import {
+	Bold,
+	ChevronDown,
+	Italic,
+	Link,
+	List,
+	ListOrdered,
+	Mail
+} from "lucide-react";
 import * as FileInput from "@/components/Form/FileInputComponent";
 import { Select } from "@/components/Form/Select";
 import { SelectItem } from "@/components/Form/Select/SelectItem";
+import { TextArea } from "@/components/Form/TextArea";
 
 export default function Home() {
 	return (
@@ -135,7 +144,52 @@ export default function Home() {
 							</span>
 						</label>
 
-						<div></div>
+						<div className='space-y-3'>
+							<div className='grid gap-3 grid-cols-2'>
+								<Select placeholder='' defaultValue='normal'>
+									<SelectItem
+										defaultChecked
+										value='normal'
+										text='Normal Text'
+									/>
+									<SelectItem value='md' text='Markdown' />
+								</Select>
+								<div className='flex items-center gap-1'>
+									<button
+										type='button'
+										className='p-2 hover:bg-zinc-50 rounded-md'>
+										<Bold className='h-4 w-4 text-zinc-500' strokeWidth={3} />
+									</button>
+									<button
+										type='button'
+										className='p-2 hover:bg-zinc-50 rounded-md'>
+										<Italic className='h-4 w-4 text-zinc-500' strokeWidth={3} />
+									</button>
+									<button
+										type='button'
+										className='p-2 hover:bg-zinc-50 rounded-md'>
+										<Link className='h-4 w-4 text-zinc-500' strokeWidth={3} />
+									</button>
+									<button
+										type='button'
+										className='p-2 hover:bg-zinc-50 rounded-md'>
+										<List className='h-4 w-4 text-zinc-500' strokeWidth={3} />
+									</button>
+									<button
+										type='button'
+										className='p-2 hover:bg-zinc-50 rounded-md'>
+										<ListOrdered
+											className='h-4 w-4 text-zinc-500'
+											strokeWidth={3}
+										/>
+									</button>
+								</div>
+							</div>
+							<TextArea
+								id='bio'
+								defaultValue="I'm a Software Engineer based in São Paulo, Brazil. Specialise in front-end for web and mobile apps using React and React Native, I also have a keen interest in back-end development and I can work my way around with Node and I have working experience with GraphQL and SQL databases."
+							/>
+						</div>
 					</div>
 
 					<div className='grid grid-cols-form gap-3 pt-5'>
