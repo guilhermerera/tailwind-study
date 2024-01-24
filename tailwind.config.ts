@@ -16,6 +16,15 @@ const config: Config = {
 				violet: {
 					25: "#fcfaff"
 				}
+			},
+			keyframes: {
+				slideDownAndFade: {
+					from: { opacity: "0", transform: "translateY(-1.5rem)" },
+					to: { opacity: "1", transform: "translateY(0)" }
+				}
+			},
+			animation: {
+				slideDownAndFade: "slideDownAndFade 0.2s ease-out"
 			}
 		}
 	},
