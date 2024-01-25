@@ -173,7 +173,7 @@ export default function Home() {
 							</div>
 							<TextArea
 								id='bio'
-								defaultValue="I'm a Software Engineer based in São Paulo, Brazil. Specialise in front-end for web and mobile apps using React and React Native, I also have a keen interest in back-end development and I can work my way around with Node and I have working experience with GraphQL and SQL databases."
+								defaultValue="I'm a Software Engineer based in São Paulo, Brazil. I'm specialized in front-end for web and mobile apps using React and React Native, but I also have a keen interest in back-end development and I can work my way around with Node and I have working experience with GraphQL and SQL databases."
 							/>
 						</div>
 					</div>
