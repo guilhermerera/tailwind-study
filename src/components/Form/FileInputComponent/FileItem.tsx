@@ -79,12 +79,12 @@ export function FileItem({ name, size, state }: FileItemProps) {
 							<div
 								className='h-2 rounded-full bg-violet-600'
 								style={{
-									width: state === "complete" ? "100%" : "80%"
+									width: state === "complete" ? "100%" : "50%"
 								}}
 							/>
 						</div>
 						<span className='text-sm font-medium text-zinc-70'>
-							{state === "complete" ? "100%" : "80%"}
+							{state === "complete" ? "100%" : "50%"}
 						</span>
 					</div>
 				</div>

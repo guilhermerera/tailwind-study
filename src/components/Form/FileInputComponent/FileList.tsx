@@ -10,8 +10,17 @@ export function FileList() {
 
 	return (
 		<div ref={parent} className='mt-4 space-y-3'>
-			{files.map((file) => {
-				return <FileItem key={file.name} name={file.name} size={file.size} state="error"/>;
+			{files.map((file, index) => {
+				const state =
+					index === 0 ? "progress" : index === 1 ? "complete" : "error";
+				return (
+					<FileItem
+						key={file.name}
+						name={file.name}
+						size={file.size}
+						state={state}
+					/>
+				);
 			})}
 		</div>
 	);
