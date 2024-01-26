@@ -21,8 +21,8 @@ export default function Home() {
 			<h1 className='text-3xl font-medium text-zinc-900'>Settings</h1>
 			<SettingsTabs />
 			<div className='mt-8 flex flex-col'>
-				<div className='flex items-center justify-between border-b border-zinc-200 pb-5'>
-					<div className='space-y-1'>
+				<div className='flex flex-col items-start lg:flex-row lg:items-center justify-between border-b border-zinc-200 pb-5'>
+					<div className='space-y-1 mb-4 lg:mb-0'>
 						<h2 className='text-zinc-900 text-lg font-medium'>Personal info</h2>
 						<span className='text-zinc-500 text-sm font-normal'>
 							Update your photo an personal details here.
@@ -40,23 +40,33 @@ export default function Home() {
 				<form
 					id='settings'
 					className='mt-6 flex flex-col w-full gap-5 divide-y divide-zinc-200'>
-					<div className='grid grid-cols-form gap-3'>
+					<div className='flex flex-col lg:grid lg:grid-cols-form gap-3'>
 						<label
 							htmlFor='firstName'
-							className='text-sm font-medium	text-zinc-700'>
+							className='hidden lg:block text-sm font-medium text-zinc-700'>
 							Name
 						</label>
-						<div className='grid gap-6 grid-cols-2'>
+						<div className='flex flex-col lg:grid gap-6 lg:grid-cols-2'>
+							<label
+								htmlFor='firstName'
+								className='lg:hidden text-sm font-medium text-zinc-700'>
+								First Name
+							</label>
 							<Input.InputRoot>
 								<Input.InputControl id='firstName' defaultValue='Guilherme' />
 							</Input.InputRoot>
+							<label
+								htmlFor='lastName'
+								className=' lg:hidden text-sm font-medium text-zinc-700'>
+								Last Name
+							</label>
 							<Input.InputRoot>
 								<Input.InputControl id='lastName' defaultValue='Ferreira' />
 							</Input.InputRoot>
 						</div>
 					</div>
 
-					<div className='grid grid-cols-form gap-3 pt-5'>
+					<div className='flex flex-col lg:grid lg:grid-cols-form gap-3 pt-5'>
 						<label htmlFor='email' className='text-sm font-medium	text-zinc-700'>
 							Email address
 						</label>
@@ -74,7 +84,7 @@ export default function Home() {
 						</Input.InputRoot>
 					</div>
 
-					<div className='grid grid-cols-form gap-3 pt-5'>
+					<div className='flex flex-col lg:grid lg:grid-cols-form gap-3 pt-5'>
 						<label htmlFor='photo' className='text-sm font-medium	text-zinc-700'>
 							Your photo
 							<span className='mt-0.5 text-sm font-normal text-zinc-500 block'>
@@ -82,7 +92,7 @@ export default function Home() {
 							</span>
 						</label>
 
-						<FileInput.Root className='flex items-start gap-5'>
+						<FileInput.Root className='flex flex-col lg:flex-row lg:items-start gap-5'>
 							<FileInput.ImagePreview />
 							<FileInput.Trigger
 								acceptedFormats='SVG, PNG, JPG or GIF'
@@ -92,7 +102,7 @@ export default function Home() {
 						</FileInput.Root>
 					</div>
 
-					<div className='grid grid-cols-form gap-3 pt-5'>
+					<div className='flex flex-col lg:grid lg:grid-cols-form gap-3 pt-5'>
 						<label htmlFor='role' className='text-sm font-medium	text-zinc-700'>
 							Role
 						</label>
@@ -106,7 +116,7 @@ export default function Home() {
 						</Input.InputRoot>
 					</div>
 
-					<div className='grid grid-cols-form gap-3 pt-5'>
+					<div className='flex flex-col lg:grid lg:grid-cols-form gap-3 pt-5'>
 						<label
 							htmlFor='country'
 							className='text-sm font-medium	text-zinc-700'>
@@ -119,7 +129,7 @@ export default function Home() {
 						</Select>
 					</div>
 
-					<div className='grid grid-cols-form gap-3 pt-5'>
+					<div className='flex flex-col lg:grid lg:grid-cols-form gap-3 pt-5'>
 						<label
 							htmlFor='timezone'
 							className='text-sm font-medium	text-zinc-700'>
@@ -132,7 +142,7 @@ export default function Home() {
 						</Select>
 					</div>
 
-					<div className='grid grid-cols-form gap-3 pt-5'>
+					<div className='flex flex-col lg:grid lg:grid-cols-form gap-3 pt-5'>
 						<label htmlFor='photo' className='text-sm font-medium	text-zinc-700'>
 							Bio
 							<span className='mt-0.5 text-sm font-normal text-zinc-500 block'>
@@ -141,7 +151,7 @@ export default function Home() {
 						</label>
 
 						<div className='space-y-3'>
-							<div className='grid gap-3 grid-cols-2'>
+							<div className='flex flex-col lg:grid gap-3 lg:grid-cols-2'>
 								<Select placeholder='' defaultValue='normal'>
 									<SelectItem
 										defaultChecked
@@ -179,7 +189,7 @@ export default function Home() {
 						</div>
 					</div>
 
-					<div className='grid grid-cols-form gap-3 pt-5'>
+					<div className='flex flex-col lg:grid lg:grid-cols-form gap-3 pt-5'>
 						<label htmlFor='photo' className='text-sm font-medium	text-zinc-700'>
 							Portifolio projects
 							<span className='mt-0.5 text-sm font-normal text-zinc-500 block'>
