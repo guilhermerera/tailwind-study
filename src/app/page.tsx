@@ -18,13 +18,13 @@ import { Button } from "@/components/Button";
 export default function Home() {
 	return (
 		<>
-			<h1 className='text-3xl font-medium text-zinc-900'>Settings</h1>
+			<h1 className='text-3xl font-medium text-zinc-900 dark:text-zinc-100'>Settings</h1>
 			<SettingsTabs />
 			<div className='mt-8 flex flex-col'>
-				<div className='flex flex-col items-start lg:flex-row lg:items-center justify-between border-b border-zinc-200 pb-5'>
+				<div className='flex flex-col items-start lg:flex-row lg:items-center justify-between border-b border-zinc-200 dark:border-zinc-700 pb-5 '>
 					<div className='space-y-1 mb-4 lg:mb-0'>
-						<h2 className='text-zinc-900 text-lg font-medium'>Personal info</h2>
-						<span className='text-zinc-500 text-sm font-normal'>
+						<h2 className='text-zinc-900 text-lg font-medium dark:text-zinc-100'>Personal info</h2>
+						<span className='text-zinc-500 text-sm font-normal dark:text-zinc-400'>
 							Update your photo an personal details here.
 						</span>
 					</div>
@@ -39,17 +39,17 @@ export default function Home() {
 				</div>
 				<form
 					id='settings'
-					className='mt-6 flex flex-col w-full gap-5 divide-y divide-zinc-200'>
+					className='mt-6 flex flex-col w-full gap-5 divide-y divide-zinc-200 dark:divide-zinc-700'>
 					<div className='flex flex-col lg:grid lg:grid-cols-form gap-3'>
 						<label
 							htmlFor='firstName'
-							className='hidden lg:block text-sm font-medium text-zinc-700'>
+							className='hidden lg:block text-sm font-medium text-zinc-700 dark:text-zinc-300'>
 							Name
 						</label>
 						<div className='flex flex-col lg:grid gap-6 lg:grid-cols-2'>
 							<label
 								htmlFor='firstName'
-								className='lg:hidden text-sm font-medium text-zinc-700'>
+								className='lg:hidden text-sm font-medium text-zinc-700 dark:text-zinc-300'>
 								First Name
 							</label>
 							<Input.InputRoot>
@@ -57,7 +57,7 @@ export default function Home() {
 							</Input.InputRoot>
 							<label
 								htmlFor='lastName'
-								className=' lg:hidden text-sm font-medium text-zinc-700'>
+								className=' lg:hidden text-sm font-medium text-zinc-700 dark:text-zinc-300'>
 								Last Name
 							</label>
 							<Input.InputRoot>
@@ -67,7 +67,7 @@ export default function Home() {
 					</div>
 
 					<div className='flex flex-col lg:grid lg:grid-cols-form gap-3 pt-5'>
-						<label htmlFor='email' className='text-sm font-medium	text-zinc-700'>
+						<label htmlFor='email' className='text-sm font-medium text-zinc-700 dark:text-zinc-300'>
 							Email address
 						</label>
 
@@ -85,9 +85,9 @@ export default function Home() {
 					</div>
 
 					<div className='flex flex-col lg:grid lg:grid-cols-form gap-3 pt-5'>
-						<label htmlFor='photo' className='text-sm font-medium	text-zinc-700'>
+						<label htmlFor='photo' className='text-sm font-medium	text-zinc-700 dark:text-zinc-300'>
 							Your photo
-							<span className='mt-0.5 text-sm font-normal text-zinc-500 block'>
+							<span className='mt-0.5 text-sm font-normal text-zinc-500 block '>
 								This will be displayed on your profile.
 							</span>
 						</label>
@@ -103,7 +103,7 @@ export default function Home() {
 					</div>
 
 					<div className='flex flex-col lg:grid lg:grid-cols-form gap-3 pt-5'>
-						<label htmlFor='role' className='text-sm font-medium	text-zinc-700'>
+						<label htmlFor='role' className='text-sm font-medium	text-zinc-700 dark:text-zinc-300'>
 							Role
 						</label>
 
@@ -119,7 +119,7 @@ export default function Home() {
 					<div className='flex flex-col lg:grid lg:grid-cols-form gap-3 pt-5'>
 						<label
 							htmlFor='country'
-							className='text-sm font-medium	text-zinc-700'>
+							className='text-sm font-medium	text-zinc-700 dark:text-zinc-300'>
 							Country
 						</label>
 
@@ -132,7 +132,7 @@ export default function Home() {
 					<div className='flex flex-col lg:grid lg:grid-cols-form gap-3 pt-5'>
 						<label
 							htmlFor='timezone'
-							className='text-sm font-medium	text-zinc-700'>
+							className='text-sm font-medium	text-zinc-700 dark:text-zinc-300'>
 							Timezone
 						</label>
 
@@ -143,7 +143,7 @@ export default function Home() {
 					</div>
 
 					<div className='flex flex-col lg:grid lg:grid-cols-form gap-3 pt-5'>
-						<label htmlFor='photo' className='text-sm font-medium	text-zinc-700'>
+						<label htmlFor='photo' className='text-sm font-medium	text-zinc-700 dark:text-zinc-300'>
 							Bio
 							<span className='mt-0.5 text-sm font-normal text-zinc-500 block'>
 								Write a short introduction.
@@ -190,7 +190,7 @@ export default function Home() {
 					</div>
 
 					<div className='flex flex-col lg:grid lg:grid-cols-form gap-3 pt-5'>
-						<label htmlFor='photo' className='text-sm font-medium	text-zinc-700'>
+						<label htmlFor='photo' className='text-sm font-medium	text-zinc-700 dark:text-zinc-300'>
 							Portifolio projects
 							<span className='mt-0.5 text-sm font-normal text-zinc-500 block'>
 								Share a few snippets of you work.

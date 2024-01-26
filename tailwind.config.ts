@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+	darkMode: "class",
 	content: ["./src/**/*.tsx"],
 	theme: {
 		extend: {
@@ -38,6 +39,12 @@ const config: Config = {
 			},
 			animation: {
 				slideDownAndFade: "slideDownAndFade 0.2s ease-out"
+			},
+			transitionProperty: {
+				switch: "all"
+			},
+			transitionDuration: {
+				switch: "0.2s"
 			}
 		}
 	},

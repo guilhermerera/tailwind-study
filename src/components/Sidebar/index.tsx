@@ -17,6 +17,7 @@ import { InputControl, InputPrefix, InputRoot } from "../Form/Input";
 import * as Collapsible from "@radix-ui/react-collapsible";
 import { Button } from "../Button";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
+import ThemeToggle from "../ThemeToggle";
 
 export function Sidebar() {
 	const [parent] = useAutoAnimate();
@@ -28,7 +29,9 @@ export function Sidebar() {
 				p-4 fixed lg:sticky border-bottom left-0 top-0 right-0 data-[state=open]:bottom-0
 				data-[state=open]:w-full data-[state=open]:z-50
 				bg-white lg:right-auto lg:w-80 lg:border-r
-				lg:px-5 lg:py8'>
+				lg:px-5 lg:py8
+				dark:bg-zinc-900 dark:border-zinc-800 dark:text-zinc-100
+				'>
 			<div className='flex items-center justify-between'>
 				<Logo />
 				<Collapsible.Trigger className='lg:hidden' asChild>
@@ -48,6 +51,8 @@ export function Sidebar() {
 					<InputControl placeholder='Search' />
 				</InputRoot>
 
+				<ThemeToggle />
+
 				<nav className='space-y-0.5'>
 					<NavItem title='Home' icon={Home} />
 					<NavItem title='Dashboard' icon={BarChart} />
@@ -64,7 +69,7 @@ export function Sidebar() {
 					</nav>
 
 					<UsedSpaceWidget />
-					<div className='h-px w-full bg-zinc-200' />
+					<div className='h-px w-full bg-zinc-200 dark:bg-zinc-700' />
 					<Profile />
 				</div>
 			</Collapsible.Content>
