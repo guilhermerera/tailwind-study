@@ -16,8 +16,10 @@ import { Profile } from "./Profile";
 import { InputControl, InputPrefix, InputRoot } from "../Form/Input";
 import * as Collapsible from "@radix-ui/react-collapsible";
 import { Button } from "../Button";
+import { useAutoAnimate } from "@formkit/auto-animate/react";
 
 export function Sidebar() {
+	const [parent] = useAutoAnimate();
 	return (
 		<Collapsible.Root
 			className='
@@ -36,8 +38,9 @@ export function Sidebar() {
 				</Collapsible.Trigger>
 			</div>
 			<Collapsible.Content
+				ref={parent}
 				forceMount
-				className='flex flex-1 flex-col gap-6 data-[state=closed]:hidden lg:data-[state=closed]:flex'>
+				className='flex flex-1 flex-col gap-6 data-[state=closed]:hidden lg:data-[state=closed]:flex data-[state=open]:animate-slideDownAndFade'>
 				<InputRoot>
 					<InputPrefix>
 						<Search className='h-5 w-5 text-zinc-500' />
